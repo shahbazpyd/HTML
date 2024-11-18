@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="style.css"> <!-- External stylesheet (not used in this example, but good practice) -->
+    <style>
+        * {
+            /* Apply styles to all elements */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Include padding and border in element's total width and height */
+        }
+
+        /* Style the main header */
+        #header1 {
+            height: 100px;
+            border: 5px solid springgreen;
+            width: 100%;
+        }
+
+        /* Style the navigation */
+        nav {
+            width: 100%;
+            height: 70px;
+            float: left;
+            /* Float the nav to the left */
+            border: 5px solid rgb(246, 150, 241);
+            margin-top: 2px;
+        }
+
+        /* Style the main article content */
+        article {
+            width: 60%;
+            height: 500px;
+            float: left;
+            /* Float the article to the left */
+            border: 5px solid rgb(150, 246, 246);
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        /* Style the header within the article */
+        article header {
+            height: 50px;
+            border: 5px solid rgb(165, 246, 150);
+            margin: 2px;
+        }
+
+        /* Style the sections within the article */
+        article section {
+            height: 50px;
+            border: 5px solid rgb(186, 58, 250);
+            margin: 2px;
+        }
+
+        /* Add top margin to section 1 */
+        #section1 {
+            margin-top: 235px;
+            /* Example of using id for styling, but classes are generally preferred */
+        }
+
+        /* Style the footer within the article */
+        article footer {
+            height: 50px;
+            border: 5px solid rgb(246, 237, 116);
+            margin: 2px;
+        }
+
+        /* Style the div container for asides*/
+        div {
+            width: 39.8%;
+            /* Adjust width to fit alongside the article, consider using calc() in real projects for better responsiveness */
+            height: 500px;
+            float: left;
+            /* Float the div to the left */
+            border: 5px solid rgb(246, 237, 116);
+            margin-top: 2px;
+            margin-left: 2px;
+            margin-bottom: 2px;
+        }
+
+        /* Style the aside elements within the div */
+        div aside {
+            border: 5px solid cyan;
+            height: 228px;
+            /* Calculated to fit two asides within the div's height*/
+            width: auto;
+            margin: 2px;
+        }
+
+        /* Style the main footer */
+        footer {
+            height: 100px;
+            clear: both;
+            /* Clear floats to prevent the footer from wrapping around floated elements */
+            border: 5px solid springgreen;
+            margin-top: 2px;
+        }
+
+        /* Media query for responsive design - stack elements vertically on smaller screens */
+        @media screen and (max-width: 600px) {
+
+            nav,
+            article,
+            div {
+                width: 100%;
+                /* Make elements full width on small screens */
+                height: auto;
+                /* Let height adjust based on content */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header1">
+        Header <!-- Main header content -->
+    </header>
+
+    <nav>
+        Nav <!-- Navigation content -->
+    </nav>
+
+    <article>
+        Article <!-- Main article content -->
+        <header id="header2">
+            Header <!-- Article header content -->
+        </header>
+
+        <section id="section1">
+            Section <!-- Article section content -->
+        </section>
+
+        <section id="section2">
+            Section <!-- Article section content -->
+        </section>
+
+        <footer id="footer1">
+            Footer <!-- Article footer content -->
+        </footer>
+    </article>
+
+    <div>
+        Div <!-- Container for aside elements -->
+        <aside id="aside1">
+            Aside <!-- Aside content -->
+        </aside>
+        <aside id="aside2">
+            Aside <!-- Aside content -->
+        </aside>
+    </div>
+
+    <footer id="footer2">
+        Footer <!-- Main footer content -->
+    </footer>
+
+</body>
+
+</html>
